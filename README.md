@@ -67,9 +67,7 @@ python main.py
 <img src = "ERD.png">
 
 ## Team Members
-- 2021327 M. Ahabb Sheraz
-- 2021510 Nauman Asif
-- 2021609 Sohaib Nasir
+- 2023622 Saad Khurshid Qurashi
 
 ## Contributing
 We welcome contributions from the community to enhance our e-commerce website. If you find any issues or have suggestions for improvement, please submit a pull request or open an issue in the repository.
