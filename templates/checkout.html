@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Checkout{% endblock %}
+{% block content %}
+<div class="container">
+  <h1>Checkout</h1>
+  <form action="{{ url_for('checkout') }}" method="POST">
+    <!--<div>
+      <label for="shipping_name">Shipping Name:</label>
+      <input type="text" id="shipping_name" name="shipping_name" required>
+    </div>
+    <div>
+      <label for="shipping_address">Shipping Address:</label>
+      <input type="text" id="shipping_address" name="shipping_address" required>
+    </div>
+    <div>
+      <label for="shipping_city">City:</label>
+      <input type="text" id="shipping_city" name="shipping_city" required>
+    </div>
+    <div>
+      <label for="shipping_state">State:</label>
+      <input type="text" id="shipping_state" name="shipping_state" required>
+    </div>
+    <div>
+      <label for="shipping_zip">ZIP Code:</label>
+      <input type="text" id="shipping_zip" name="shipping_zip" required>
+    </div>
+    <div>
+      <label for="shipping_country">Country:</label>
+      <input type="text" id="shipping_country" name="shipping_country" required>
+    </div>
+-->
+  <h2>Order Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in cart_items %}
+          <tr>
+            <td>{{ product.product_name }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.price * product.quantity }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total:</td>
+          <td>{{ totalPrice }}</td>
+        </tr>
+      </tfoot>
+    </table>
+    <div style="text-align: left;">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+    </div>
+    <div style="text-align: right;">
+    <input class="checkout" type="submit" value="Pay with Card through Stripe">
+  </form>
+</div></div>
+{% endblock %}
+
+
+
