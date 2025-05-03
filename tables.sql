@@ -191,4 +191,4 @@ END;
 $$;
 
 INSERT INTO admin(admin_id,first_name,last_name,login_id)
-VALUES('A001','Saad','Khurshid','A001');
+VALUES('sk104','Saad','Khurshid','saad104');
