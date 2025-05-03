@@ -7,7 +7,7 @@ load_dotenv()
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 app.config['ALLOWED_EXTENSIONS'] = {'jpg', 'jpeg', 'png', 'gif'}
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:12345678@localhost:5433/ecomproject'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:pgadmin4@localhost:5432/ecomproject'
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
