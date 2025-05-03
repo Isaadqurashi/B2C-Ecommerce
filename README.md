@@ -1,8 +1,6 @@
 # B2C E-commerce Project
-![](https://img.shields.io/github/stars/AhabbscienceStudioPak/B2C-E-commerce-Project.svg) 
-![](https://img.shields.io/github/forks/AhabbscienceStudioPak/B2C-E-commerce-Project.svg) 
 ![](https://img.shields.io/github/issues/AhabbscienceStudioPak/B2C-E-commerce-Project.svg)
-    <a href="https://drive.google.com/file/d/1aKI5Gx9vJTlt0LpGvs81RN3DmCEC4FEH/view?usp=sharing">
+    <a href="https://drive.google.com/file/d/1yQETGQlPU1pp5divxP75AhhytIeM5rwB/view?usp=drive_link">
       <img src='https://img.shields.io/badge/Paper-PDF-green?style=for-the-badge&logo=adobeacrobatreader&logoWidth=20&logoColor=white&labelColor=66cc00&color=94DD15' alt='Paper PDF'>
     </a>
 <img src = "kucho mucho.JPG">
