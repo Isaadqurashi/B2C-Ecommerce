@@ -130,31 +130,25 @@ def addToCart():
         cust_id = session['customer_id']
     
         productData = Product.query.filter_by(product_id=product_id).first()
-        # Check if the product is already in the cart
         cart = Cart.query.filter_by(customer=cust_id).first()
 
         if not cart:
-            # If the customer doesn't have a cart, create a new one
             cart = Cart(cart_id=str(uuid.uuid4())[:20], customer=cust_id, nop=0, total_price=0)
 
-        # Check if the product is already in the cart
         cart_product = CartProduct.query.filter_by(cart_id=cart.cart_id, product_id=product_id).first()
 
         if cart_product:
             cart_product.quantity += int(request.form['quantity'])
             cart.nop += int(request.form['quantity'])  
-            #productData.quantity_pu -= int(request.form['quantity'])
         else:
             cart_product = CartProduct(cart_id=cart.cart_id, product_id=product_id, quantity=int(request.form['quantity']))
             cart.nop += int(request.form['quantity'])
             db.session.add(cart_product)
-            #productData.quantity_pu -= int(request.form['quantity'])
 
-        # Update the total price
         product = Product.query.get(product_id)
         cart.total_price += product.price * int(request.form['quantity'])
 
-        db.session.add(cart) # Move this line before event registration
+        db.session.add(cart) 
         db.session.commit()
 
         msg = "Added successfully"
