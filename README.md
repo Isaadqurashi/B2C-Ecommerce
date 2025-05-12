@@ -34,7 +34,7 @@ This directory contains all the HTML files that need to be rendered.
 
 1. Clone the repository:
 ```shell
-git clone https://github.com/AhabbscienceStudioPak/B2C-E-commerce-Project.git
+git clone https://github.com/Isaadqurashi/B2C-Ecommerce.git
 ```
 
 2. Change to the project directory:
