@@ -14,7 +14,7 @@ from dash import dcc
 from dash import html
 import plotly.graph_objs as go
 import firebase_admin
-from firebase_admin import credentials, db as firebase_db
+from firebase_admin import db as firebase_db
 from sqlalchemy import inspect 
 
 # Ensure these model names are correct as per your models.py
@@ -209,7 +209,7 @@ def analytics():
 
 # --- Firebase initialization for backups ---
 try:
-    cred = credentials.Certificate('credentials.json')
+    cred = credentials.Certificate(r'D:\git-hub-REPOs\Secret files of B2C Ecom Proj\credentials.json')
     if not firebase_admin._apps:
         firebase_admin.initialize_app(cred, {
             'databaseURL': 'https://kuchu-muchu-default-rtdb.firebaseio.com/'
