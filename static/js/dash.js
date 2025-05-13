@@ -2,7 +2,7 @@
 
 // Embed the Dash app in the HTML page
 var myDashApp = document.getElementById('sales-graph');
-var url = 'http://127.0.0.1:5000'; // Replace with the URL of your Dash app
+var url = 'http://127.0.0.1:5000'; 
 
 // Fetch the layout and data from the Dash app
 Promise.all([
