@@ -209,7 +209,7 @@ def analytics():
 
 # --- Firebase initialization for backups ---
 try:
-    cred = credentials.Certificate('credentials.json')
+    cred = credentials.Certificate(r'D:\git-hub-REPOs\Secret files of B2C Ecom Proj\credentials.json')
     if not firebase_admin._apps:
         firebase_admin.initialize_app(cred, {
             'databaseURL': 'https://kuchu-muchu-default-rtdb.firebaseio.com/'
