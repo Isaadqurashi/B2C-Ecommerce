@@ -39,7 +39,6 @@ def login():
         if customer and customer.passwd == entered_password:
             session['username'] = usr
             session['customer_id'] = customer.customer_id
-            flash('You are successfully logged in')
             return redirect(url_for('index'))
         else:
             error = 'Invalid Credentials. Please try again.'
