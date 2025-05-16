@@ -8,10 +8,6 @@ from werkzeug.utils import secure_filename
 import os
 import stripe
 from datetime import date
-import dash
-from dash import dcc
-from dash import html
-import plotly.graph_objs as go
 
 def allowed_file(filename):
     return '.' in filename and \

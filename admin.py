@@ -4,7 +4,7 @@ from models import *
 
 from flask import flash, render_template, request, session, redirect, url_for
 import uuid
-import logging # Not used in this snippet, but kept if used elsewhere
+import logging
 from werkzeug.utils import secure_filename
 import os
 from datetime import date 
@@ -17,14 +17,8 @@ import firebase_admin
 from firebase_admin import credentials, db as firebase_db
 from sqlalchemy import inspect 
 
-# Ensure these model names are correct as per your models.py
-# Define the list of models you want to back up
-# IMPORTANT: Replace these with your actual model classes from models.py
-# Example: MODELS_TO_BACKUP = [User, Product, Invoice]
-# For this example, I'm using the models mentioned or inferred from your code:
-# Ensure these are the actual class names from your 'models.py' file
 try:
-    # Ensure these Model classes are correctly imported from your models.py
+    # this Ensure these Model classes are correctly imported from your models.py
     MODELS_TO_BACKUP = [Admin, Product, Order, OrderItem, OrderInfo]
 except NameError:
     print("WARNING: One or more model classes for backup (Admin, Product, Order, OrderItem, OrderInfo) not found directly. Ensure they are imported correctly from models.py.")
